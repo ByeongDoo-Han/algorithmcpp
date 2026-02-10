@@ -12,12 +12,11 @@ vector<int> solution(vector<int> prices) {
 
     for (int i = 0; i < l - 1; i++) {
         for (int j = i + 1; j < l; j++) {
-            if (prices[i] <= prices[j]) {
-                cnt++;
-            } else {
-                cnt++;
+            cnt++;
+            if (prices[i] <= prices[j])
+                continue;
+            else
                 break;
-            }
         }
         answer.push_back(cnt);
         cnt = 0;
